@@ -1,0 +1,20 @@
+Background  1F2127
+Text        9BA2B1
+Bold Text   FFFFFF
+
+Black           000000
+Red             D93D2B
+Green           40C82B
+Yellow          B1B12A
+Blue            642CFE
+Magenta         E732E5
+Cyan            3EC0CD
+LightGray       CBCBCB
+DarkGray        000000
+LightRed        D93D2B
+LightGreen      40C82B
+LightYellow     B1B12A
+LightBlue       642CFE
+LightMagenta    E732E5
+LightCyan       3EC0CD
+White           CBCBCB
