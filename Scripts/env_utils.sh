@@ -46,9 +46,29 @@ function evarappend {
     fi
 }
 
+# Removes all duplicate entries from the environment variable leaving the first appearance
+# ex: uniqevar PATH
+function uniqevar {
+    if [[ $# -ne 1 || -z ${!1+x} ]]; then
+        return $(false)
+    fi
+    
+    local entries
+    for entry in $(lsevar $1); do
+        if (grepevar entries $entry) > /dev/null; then
+            continue
+        fi
+        
+        evarappend entries $entry
+    done
+    
+    eval "$1=\$entries"
+}
+
 # PATH related commands
 alias lspath='lsevar PATH'
 alias greppath='grepevar PATH'
+alias uniqpath='uniqevar PATH'
 
 # Adds the first argument to the front of PATH if is not present
 # ex: pathprepend $HOME/bin
