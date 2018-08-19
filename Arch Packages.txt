@@ -1,0 +1,10 @@
+vim
+sudo
+xorg-server
+lightdm
+xfce 
+firefox
+xfce4-whiskermenu-plugin
+atom
+git
+adobe-source-code-pro-fonts
