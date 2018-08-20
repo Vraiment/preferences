@@ -1,0 +1,6 @@
+Location: $HOME/.config/xfce4/terminal/terminalrc
+
+ColorForeground=#9b9ba2a2b1b1
+ColorBackground=#1f1f21212727
+TabActivityColor=#ffffffffffff
+ColorPalette=rgb(0,0,0);rgb(217,61,43);rgb(64,200,43);rgb(177,177,42);rgb(100,44,254);rgb(231,50,229);rgb(62,192,205);rgb(203,203,203);rgb(0,0,0);rgb(217,61,43);rgb(64,200,43);rgb(177,177,42);rgb(100,44,254);rgb(231,50,229);rgb(62,192,205);rgb(203,203,203)
