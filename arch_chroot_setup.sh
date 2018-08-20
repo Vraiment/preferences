@@ -35,7 +35,7 @@ function setupBootloader {
 }
 
 function setupSystem {
-    pacman -Syu vim sudo xorg-server lightdm xfce4 firefox xfce4-whiskermenu-plugin atom git adobe-source-code-pro-fonts
+    pacman -Syu vim sudo xorg-server lightdm lightdm-gtk-greeter xfce4 firefox xfce4-whiskermenu-plugin atom git adobe-source-code-pro-fonts
     systemctl enable lightdm.service
 }
 
