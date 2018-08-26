@@ -1,10 +1,22 @@
+# TUI utilities
 vim
 sudo
+git
+
+# Required for UI
 xorg-server
 lightdm
-xfce 
-firefox
+lightdm-gtk-greeter
+
+# Desktop environment
+xfce
 xfce4-whiskermenu-plugin
-atom
-git
 adobe-source-code-pro-fonts
+
+# Applications
+firefox
+file-roller # For compressed files
+ristretto # Image viewer
+mousepad # Simple text editor
+atom #Advanced text editor
+systemd-ui

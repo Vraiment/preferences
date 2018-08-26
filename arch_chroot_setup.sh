@@ -35,7 +35,12 @@ function setupBootloader {
 }
 
 function setupSystem {
-    pacman -Syu vim sudo xorg-server lightdm lightdm-gtk-greeter xfce4 firefox xfce4-whiskermenu-plugin atom git adobe-source-code-pro-fonts
+    local TUI_UTILITIES="sudo vim git"
+    local UI_BASE="xorg-server lightdm lightdm-gtk-greeter"
+    local DESKTOP_ENVIRONMENT="xfce xfce4-whiskermenu-plugin adobe-source-code-pro-fonts"
+    local APPLICATIONS="firefox file-roller ristretto mousepad atom systemd-ui"
+
+    pacman -Syu $TUI_UTILITIES $UI_BASE $DESKTOP_ENVIRONMENT $APPLICATIONS
     systemctl enable lightdm.service
 }
 
