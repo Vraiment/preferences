@@ -9,14 +9,17 @@
 #        "$HOME/.config/bashrc.sh"                                             #
 # -----------------------------------------------------------------------------#
 
+# Location of helper shell files
+VRAI_SHELL_DIR="$HOME/.config/vraishell"
+
+# commands to manipulate the path
+source "$VRAI_SHELL_DIR/env-var-list.sh"
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
       *) return;;
 esac
-
-# Location of helper shell files
-VRAI_SHELL_DIR="$HOME/.config/vraishell"
 
 # Common environment variables
 source "$VRAI_SHELL_DIR/aliases.sh"
