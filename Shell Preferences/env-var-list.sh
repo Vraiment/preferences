@@ -1,10 +1,18 @@
+# -----------------------------------------------------------------------------#
+#  Author: Vraiment                                                            #
+#                                                                              #
+# These are a set of useful shell functions/commands to manage environment     #
+# variables that contain a list of things, the main example would be the $PATH #
+# variable, but is not limited to that (ex: Java's $CLASSPATH)                 #
+# -----------------------------------------------------------------------------#
+
 # Adds lists the entries in the variable with the name of the first argument
 # ex: lsevar PATH
 function lsevar {
     if [[ $# -ne 1 || -z ${!1+x} ]]; then
         return $(false)
     fi
-    
+
     tr ':' "\n" <<< ${!1}
 }
 
@@ -14,7 +22,7 @@ function grepevar {
     if [ $# -ne 2 ]; then
         return $(false)
     fi
-    
+
     lsevar $1 | grep "^$2$"
 }
 
@@ -24,7 +32,7 @@ function evarprepend {
     if [ $# -ne 2 ]; then
         return $(false)
     fi
-    
+
     if [ -z ${!1} ]; then
         eval "$1=\$2"
     else
@@ -38,7 +46,7 @@ function evarappend {
     if [ $# -ne 2 ]; then
         return $(false)
     fi
-    
+
     if [ -z ${!1} ]; then
         eval "$1=\$2"
     else
@@ -52,16 +60,16 @@ function uniqevar {
     if [[ $# -ne 1 || -z ${!1+x} ]]; then
         return $(false)
     fi
-    
+
     local entries
     for entry in $(lsevar $1); do
         if (grepevar entries $entry) > /dev/null; then
             continue
         fi
-        
+
         evarappend entries $entry
     done
-    
+
     eval "$1=\$entries"
 }
 
@@ -76,7 +84,7 @@ function pathprepend {
     if [[ $# -ne 1 || $(greppath $1) ]]; then
         return $(false)
     fi
-    
+
     evarprepend PATH $1
 }
 
@@ -86,6 +94,6 @@ function pathappend {
     if [[ $# -ne 1 || $(greppath $1) ]]; then
         return $(false)
     fi
-    
+
     evarappend PATH $1
 }
