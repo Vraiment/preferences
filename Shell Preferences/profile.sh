@@ -32,3 +32,5 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     pathprepend "$HOME/.local/bin"
 fi
+
+unset VRAI_SHELL_DIR

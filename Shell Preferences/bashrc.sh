@@ -26,3 +26,5 @@ source "$VRAI_SHELL_DIR/aliases.sh"
 
 # Custom prompt
 source "$VRAI_SHELL_DIR/prompt.sh"
+
+unset VRAI_SHELL_DIR
