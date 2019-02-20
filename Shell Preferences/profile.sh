@@ -12,11 +12,11 @@
 # Location of helper shell files
 VRAI_SHELL_DIR="$HOME/.config/vraishell"
 
-# Common environment variables
-source "$VRAI_SHELL_DIR/env-variables.sh"
-
 # commands to manipulate the path
 source "$VRAI_SHELL_DIR/env-var-list.sh"
+
+# Common environment variables
+source "$VRAI_SHELL_DIR/env-variables.sh"
 
 # If running bash source the bashrc
 if [ -n "$BASH_VERSION" ]; then
