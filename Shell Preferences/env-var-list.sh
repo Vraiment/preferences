@@ -6,7 +6,7 @@
 # variable, but is not limited to that (ex: Java's $CLASSPATH)                 #
 # -----------------------------------------------------------------------------#
 
-# Adds lists the entries in the variable with the name of the first argument
+# Lists the entries in the variable with the name of the first argument
 # ex: lsevar PATH
 function lsevar {
     if [[ $# -ne 1 || -z ${!1+x} ]]; then
@@ -74,9 +74,24 @@ function uniqevar {
 }
 
 # PATH related commands
-alias lspath='lsevar PATH'
-alias greppath='grepevar PATH'
-alias uniqpath='uniqevar PATH'
+
+# Lists the entries in the PATH variable
+# ex: lspath
+function lspath {
+    lsevar PATH
+}
+
+# Verifies if the second argument is in the PATH variable
+# ex: greppath /bin
+function greppath {
+    grepevar PATH $1
+}
+
+# Removes all duplicate entries from the PATH environment variable leaving the first appearance
+# ex: uniqpath
+function uniqpath {
+    uniqevar PATH
+}
 
 # Adds the first argument to the front of PATH if is not present
 # ex: pathprepend $HOME/bin
