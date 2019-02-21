@@ -13,7 +13,7 @@ function lsevar {
         return $(false)
     fi
 
-    tr ':' "\n" <<< ${!1}
+    echo ${!1} | tr ':' "\n"
 }
 
 # Verifies if the second argument is in the variable with the name of the first argument
