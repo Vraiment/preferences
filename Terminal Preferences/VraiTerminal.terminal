@@ -249,7 +249,7 @@
 	<key>UseBrightBold</key>
 	<false/>
 	<key>name</key>
-	<string>Personal</string>
+	<string>VraiTerminal</string>
 	<key>type</key>
 	<string>Window Settings</string>
 </dict>
