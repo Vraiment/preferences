@@ -13,6 +13,6 @@ fi
 case "$(uname -s)" in
     Darwin*)
         # Makes so "ls" output is colored
-        CLICOLOR=1
+        export CLICOLOR=1
         ;;
 esac
