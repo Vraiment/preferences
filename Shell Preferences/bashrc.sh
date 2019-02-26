@@ -10,7 +10,11 @@
 # -----------------------------------------------------------------------------#
 
 # Location of helper shell files
-VRAI_SHELL_DIR="$HOME/.config/vraishell"
+if [ -n "$VRAI_SHELL_DIR" ]; then
+    VRAI_SHELL_DIR="$HOME/.config/vraishell"
+else
+    CLEAR_VRAI_SHELL_DIR=true
+fi
 
 # commands to manipulate the path
 source "$VRAI_SHELL_DIR/env-var-list.sh"
@@ -27,4 +31,6 @@ source "$VRAI_SHELL_DIR/aliases.sh"
 # Custom prompt
 source "$VRAI_SHELL_DIR/prompt.sh"
 
-unset VRAI_SHELL_DIR
+if [ "$CLEAR_VRAI_SHELL_DIR" = true ]; then
+    unset VRAI_SHELL_DIR
+fi
