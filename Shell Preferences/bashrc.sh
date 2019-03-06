@@ -10,7 +10,7 @@
 # -----------------------------------------------------------------------------#
 
 # Location of helper shell files
-if [ -n "$VRAI_SHELL_DIR" ]; then
+if [ -z "$VRAI_SHELL_DIR" ]; then
     VRAI_SHELL_DIR="$HOME/.config/vraishell"
 else
     CLEAR_VRAI_SHELL_DIR=true
