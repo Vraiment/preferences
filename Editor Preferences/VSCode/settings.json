@@ -2,10 +2,14 @@
     "editor.find.addExtraSpaceOnTop": false,
     "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "all",
+    "editor.scrollBeyondLastLine": false,
     "editor.wordWrapColumn": 120,
+    "explorer.autoReveal": false,
+    "explorer.openEditors.visible": 0,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "workbench.colorTheme": "Atom One Dark",
     "workbench.editor.enablePreview": false,
-    "workbench.iconTheme": "vscode-great-icons"
+    "workbench.iconTheme": "vscode-great-icons",
+    "workbench.startupEditor": "none"
 }
