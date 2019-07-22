@@ -2,4 +2,3 @@ akamud.vscode-theme-onedark
 DavidAnson.vscode-markdownlint
 emmanuelbeziat.vscode-great-icons
 fabiospampinato.vscode-diff
-ms-vscode.csharp
