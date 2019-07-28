@@ -4,13 +4,13 @@
 # Template for a "$HOME/.profile" file, to install:                            #
 #     1. Backup any existing "$HOME/.profile"                                  #
 #     2. Copy all files under the "Shell Preferences" folder to                #
-#        "$HOME/.config/vraishell"                                             #
+#        "$HOME/.local/etc/vraishell"                                          #
 #     3. Create an alias from "$HOME/.profile" that points to                  #
-#        "$HOME/.config/vraishell/profile.sh"                                  #
+#        "$HOME/.local/etc/vraishell/profile.sh"                               #
 # -----------------------------------------------------------------------------#
 
 # Location of helper shell files
-VRAI_SHELL_DIR="$HOME/.config/vraishell"
+VRAI_SHELL_DIR="$HOME/.local/etc/vraishell"
 
 # commands to manipulate the path
 source "$VRAI_SHELL_DIR/env-var-list.sh"

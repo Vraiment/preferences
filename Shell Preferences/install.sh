@@ -3,7 +3,7 @@
 # Location of helper shell files
 RC_FILE="$HOME/.bashrc"
 PROFILE_FILE="$HOME/.profile"
-VRAI_SHELL_DIR="$HOME/.config/vraishell"
+VRAI_SHELL_DIR="$HOME/.local/etc/vraishell"
 
 function backup_if_exists {
     if [ -e "$PROFILE_FILE" ] || [ -e "$RC_FILE" ] || [ -e "$VRAI_SHELL_DIR" ]; then

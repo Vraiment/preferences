@@ -4,14 +4,14 @@
 # Template for a "$HOME/.bashrc" file, to install:                             #
 #     1. Backup any existing "$HOME/.bashrc"                                   #
 #     2. Copy all files under the "Shell Preferences" folder to                #
-#        "$HOME/.config/vraishell"                                             #
+#        "$HOME/.local/etc/vraishell"                                          #
 #     3. Create an alias from "$HOME/.bashrc" that points to                   #
-#        "$HOME/.config/vraishell/bashrc.sh"                                   #
+#        "$HOME/.local/etc/vraishell/bashrc.sh"                                #
 # -----------------------------------------------------------------------------#
 
 # Location of helper shell files
 if [ -z "$VRAI_SHELL_DIR" ]; then
-    VRAI_SHELL_DIR="$HOME/.config/vraishell"
+    VRAI_SHELL_DIR="$HOME/.local/etc/vraishell"
 else
     CLEAR_VRAI_SHELL_DIR=true
 fi

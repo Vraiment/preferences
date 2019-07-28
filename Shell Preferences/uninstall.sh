@@ -7,4 +7,4 @@ echo "Remove .profile from the home dir"
 rm -f "$HOME/.profile"
 
 echo "Remove config dir"
-rm -rf "$HOME/.config/vraishell"
+rm -rf "$HOME/.local/etc/vraishell"
