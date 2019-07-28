@@ -10,5 +10,5 @@ bold-color='rgb(255,255,255)'
 background-color='rgb(31,33,39)'
 
 [/]
-list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', 'ca0d0590-c1a8-4247-9fb9-00f00a78b6cd']
+list=['ca0d0590-c1a8-4247-9fb9-00f00a78b6cd']
 default='ca0d0590-c1a8-4247-9fb9-00f00a78b6cd'
