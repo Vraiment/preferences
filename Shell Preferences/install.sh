@@ -39,14 +39,14 @@ backup_if_exists
 echo "Creating config dir"
 mkdir $VRAI_SHELL_DIR
 
-SHELL_FILES='aliases.sh env-var-list.sh env-variables.sh prompt.sh'
+SHELL_FILES='aliases.sh bashrc.sh env-var-list.sh env-variables.sh profile.sh prompt.sh'
 for SHELL_FILE in $SHELL_FILES; do
     echo "Installing $SHELL_FILE in config dir"
     cp $SHELL_FILE "$VRAI_SHELL_DIR/"
 done
 
 echo "Installing .bashrc in home dir"
-cp "./bashrc.sh" "$HOME/.bashrc"
+ln -s "$VRAI_SHELL_DIR/bashrc.sh" "$HOME/.bashrc"
 
 echo "Installing .profile in home dir"
-cp "./profile.sh" "$HOME/.profile"
+ln -s "$VRAI_SHELL_DIR/profile.sh" "$HOME/.profile"

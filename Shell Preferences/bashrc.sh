@@ -6,7 +6,7 @@
 #     2. Copy all files under the "Shell Preferences" folder to                #
 #        "$HOME/.config/vraishell"                                             #
 #     3. Create an alias from "$HOME/.bashrc" that points to                   #
-#        "$HOME/.config/bashrc.sh"                                             #
+#        "$HOME/.config/vraishell/bashrc.sh"                                   #
 # -----------------------------------------------------------------------------#
 
 # Location of helper shell files
