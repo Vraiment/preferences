@@ -10,7 +10,7 @@
             "cursorColor" : "#CBCBCB",
             "cursorShape" : "filledBox",
             "fontSize" : 11,
-            "startingDirectory": "$HOME",
+            "startingDirectory" : "\\\\wsl$\\{DISTRO}\\home\\{USER}",
             "scrollbarState" : "visible"
         }
     ],
