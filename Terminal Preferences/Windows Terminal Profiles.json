@@ -1,5 +1,5 @@
 {
-	"globals": {
+    "globals": {
         "alwaysShowTabs": true,
         "showTabsInTitlebar": false,
         "showTerminalTitleInTitlebar": false
@@ -14,7 +14,7 @@
             "scrollbarState" : "visible"
         }
     ],
-	"schemes": [
+    "schemes": [
         {
             "background" : "#1F2127",
             "black" : "#000000",
@@ -36,5 +36,5 @@
             "white" : "#CBCBCB",
             "yellow" : "#B1B12A"
         }
-	]
+    ]
 }
