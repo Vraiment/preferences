@@ -33,7 +33,7 @@ function evarprepend {
         return $(false)
     fi
 
-    if [ -z ${!1} ]; then
+    if [ -z "${!1}" ]; then
         eval "$1=\$2"
     else
         eval "$1=\$2:\${!1}"
@@ -47,7 +47,7 @@ function evarappend {
         return $(false)
     fi
 
-    if [ -z ${!1} ]; then
+    if [ -z "${!1}" ]; then
         eval "$1=\$2"
     else
         eval "$1=\${!1}:\$2"
