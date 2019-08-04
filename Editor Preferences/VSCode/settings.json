@@ -2,6 +2,7 @@
     "editor.find.addExtraSpaceOnTop": false,
     "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "all",
+    "editor.rulers": [ 80, 120 ],
     "editor.scrollBeyondLastLine": false,
     "editor.wordWrapColumn": 120,
     "explorer.autoReveal": false,
