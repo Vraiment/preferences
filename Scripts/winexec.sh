@@ -8,13 +8,13 @@
 # is found then the script fails. It is recommended to have a single script and
 # create symbolic links with the corresponding names for the executables.
 
-EXECUTABLE=$(basename "${0}"); shift
-DIRS=$(echo ${WIN_PATH} | tr ':' "\n") 
+EXECUTABLE=$(basename "${0}")
+DIRS=$(echo ${WIN_PATH} | tr ':' "\n")
 
 for DIR in $DIRS; do
     FULL_PATH="${DIR}/${EXECUTABLE}"
     if [ -x "${FULL_PATH}" ]; then
-        exec "${FULL_PATH}"
+        exec "${FULL_PATH}" "$@"
     fi
 done
 
