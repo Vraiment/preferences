@@ -9,9 +9,9 @@
 # create symbolic links with the corresponding names for the executables.
 
 EXECUTABLE=$(basename "${0}")
-DIRS=$(echo ${WIN_PATH} | tr ':' "\n")
+IFS=':'
 
-for DIR in $DIRS; do
+for DIR in $WIN_PATH; do
     FULL_PATH="${DIR}/${EXECUTABLE}"
     if [ -x "${FULL_PATH}" ]; then
         exec "${FULL_PATH}" "$@"
