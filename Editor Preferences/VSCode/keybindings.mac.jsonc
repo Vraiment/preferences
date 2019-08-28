@@ -1,0 +1,183 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    // Use "sane" right tab switching
+    //   - Remove default bindings to "ctrl+tab" (x2)
+    //   - Bind "ctrl+tab" to select right tab in group
+    {
+        "key": "ctrl+tab",
+        "command": "-workbench.action.openNextRecentlyUsedEditorInGroup"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "-workbench.action.quickOpenNavigateNextInEditorPicker"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditorInGroup"
+    },
+    // Use "sane" left tab switching
+    //   - Remove default bindings to "ctrl+shift+tab" (x2)
+    //   - Bind "ctrl+shift+tab" to select left tab
+    {
+        "key": "ctrl+shift+tab",
+        "command": "-workbench.action.openPreviousRecentlyUsedEditorInGroup"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "-workbench.action.quickOpenNavigatePreviousInEditorPicker"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditorInGroup"
+    },
+
+    // Language selector
+    {
+        "key": "cmd+l",
+        "command": "-expandLineSelection"
+    },
+    {
+        "key": "cmd+k m",
+        "command": "-workbench.action.editor.changeLanguageMode"
+    },
+    {
+        "key": "cmd+l",
+        "command": "workbench.action.editor.changeLanguageMode"
+    },
+
+    // Replace
+    {
+        "key": "cmd+r",
+        "command": "-workbench.action.reloadWindow"
+    },
+    {
+        "key": "alt+cmd+f",
+        "command": "-editor.action.startFindReplaceAction"
+    },
+    {
+        "key": "cmd+r",
+        "command": "editor.action.startFindReplaceAction"
+    },
+
+    /***********************************************************************************************************/
+    // Sidebar
+    /***********************************************************************************************************/
+    // Rebind "Explorer" sidebar
+    //   - Remove default bindings for "cmd+1"
+    //   - Remove default binding for explorer sidebar
+    //   - Bind "cmd+1" to show the explorer sidebar when not visible
+    //   - Bind "cmd+1" to hide the explorer sidebar when visible
+    {
+        "key": "cmd+1",
+        "command": "-workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "shift+cmd+e",
+        "command": "-workbench.view.explorer"
+    },
+    {
+        "key": "cmd+1",
+        "command": "workbench.view.explorer",
+        "when": "!sideBarVisible || activeViewlet != 'workbench.view.explorer'"
+    },
+    {
+        "key": "cmd+1",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "sideBarVisible && activeViewlet == 'workbench.view.explorer'"
+    },
+    // Rebind "Find" sidebar
+    //   - Remove default bindings for "cmd+2"
+    //   - Bind "cmd+shift+2" to hide the find sidebar when not visible
+    //   - Bind "cmd+2" to show the find sidebar when not visible
+    //   - Bind "cmd+2" to hide the find sidebar when visible
+    {
+        "key": "cmd+2",
+        "command": "-workbench.action.focusSecondEditorGroup"
+    },
+    {
+        "key": "cmd+shift+f",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "sideBarFocus && searchViewletVisible"
+    },
+    {
+        "key": "cmd+2",
+        "command": "workbench.view.search",
+        "when": "!sideBarVisible || activeViewlet != 'workbench.view.search'"
+    },
+    {
+        "key": "cmd+2",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "sideBarVisible && activeViewlet == 'workbench.view.search'"
+    },
+    // Rebind "SCM" sidebar
+    //   - Remove default bindings for "cmd+3"
+    //   - Remove default bindings for scm sidebar
+    //   - Bind "cmd+3" to show the find scm when not visible
+    //   - Bind "cmd+3" to hide the find scm when visible
+    {
+        "key": "cmd+3",
+        "command": "-workbench.action.focusThirdEditorGroup"
+    },
+    {
+        "key": "shift+cmd+g",
+        "command": "-workbench.view.scm"
+    },
+    {
+        "key": "cmd+3",
+        "command": "workbench.view.scm",
+        "when": "!sideBarVisible || activeViewlet != 'workbench.view.scm'"
+    },
+    {
+        "key": "cmd+3",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "sideBarVisible && activeViewlet == 'workbench.view.scm'"
+    },
+    // Rebind "Extensions" sidebar
+    //   - Remove default bindings for "cmd+4"
+    //   - Remove default bindings for scm sidebar
+    //   - Bind "cmd+4" to show the find scm when not visible
+    //   - Bind "cmd+4" to hide the find scm when visible
+    {
+        "key": "cmd+4",
+        "command": "-workbench.action.focusFourthEditorGroup"
+    },
+    {
+        "key": "shift+cmd+x",
+        "command": "-workbench.view.extensions"
+    },
+    {
+        "key": "cmd+4",
+        "command": "workbench.view.extensions",
+        "when": "!sideBarVisible || activeViewlet != 'workbench.view.extensions'"
+    },
+    {
+        "key": "cmd+4",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "sideBarVisible && activeViewlet == 'workbench.view.extensions'"
+    },
+    // Unbind "cmd+5" through "cmd+0"
+    {
+        "key": "cmd+5",
+        "command": "-workbench.action.focusFifthEditorGroup"
+    },
+    {
+        "key": "cmd+6",
+        "command": "-workbench.action.focusSixthEditorGroup"
+    },
+    {
+        "key": "cmd+7",
+        "command": "-workbench.action.focusSeventhEditorGroup"
+    },
+    {
+        "key": "cmd+8",
+        "command": "-workbench.action.focusEighthEditorGroup"
+    },
+    {
+        "key": "cmd+9",
+        "command": "-workbench.action.lastEditorInGroup"
+    },
+    {
+        "key": "cmd+0",
+        "command": "-workbench.action.focusSideBar"
+    }
+]
