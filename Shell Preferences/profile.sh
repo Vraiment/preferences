@@ -46,6 +46,13 @@ if [ -f "/usr/local/bin/rbenv" ]; then
     }
 fi
 
+# Initialize sdkman
+SDKMAN_DIR="$HOME/.sdkman"
+if [ -d $SDKMAN_DIR ]; then
+    export SDKMAN_DIR
+    [[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
+fi
+
 # Adds user's personal bin directory
 if [ -d "$HOME/bin" ] ; then
     pathprepend "$HOME/bin"
