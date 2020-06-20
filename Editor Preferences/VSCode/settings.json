@@ -11,6 +11,6 @@
     "telemetry.enableTelemetry": false,
     "workbench.colorTheme": "Atom One Dark",
     "workbench.editor.enablePreview": false,
-    "workbench.iconTheme": "vscode-great-icons",
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "none"
 }
