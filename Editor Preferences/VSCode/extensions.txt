@@ -1,5 +1,5 @@
 akamud.vscode-theme-onedark
 pkief.material-icon-theme
 
-DavidAnson.vscode-markdownlint
-fabiospampinato.vscode-diff
+eriklynd.json-tools
+ryu1kn.partial-diff
