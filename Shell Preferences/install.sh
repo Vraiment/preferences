@@ -14,7 +14,8 @@ function backup_if_exists {
             *) exit 0;;
         esac
         
-        local EPOCH=$(date +%s)
+        local EPOCH
+        EPOCH=$(date +%s)
         echo "Backups will be suffixed with '$EPOCH'"
         
         if [ -e "$RC_FILE" ]; then
@@ -37,12 +38,12 @@ function backup_if_exists {
 backup_if_exists
 
 echo "Creating config dir"
-mkdir -p $VRAI_SHELL_DIR
+mkdir -p "$VRAI_SHELL_DIR"
 
 SHELL_FILES='aliases.sh bashrc.sh env-var-list.sh env-variables.sh profile.sh prompt.sh'
 for SHELL_FILE in $SHELL_FILES; do
     echo "Installing $SHELL_FILE in config dir"
-    cp $SHELL_FILE "$VRAI_SHELL_DIR/"
+    cp "$SHELL_FILE" "$VRAI_SHELL_DIR/"
 done
 
 echo "Installing .bashrc in home dir"

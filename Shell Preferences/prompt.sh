@@ -11,7 +11,7 @@
 function __customGeneratePrompt {
     local EXIT="$?"
     
-    if [ -z $CUSTOM_PROMPT_HOST ]; then
+    if [ -z "$CUSTOM_PROMPT_HOST" ]; then
         local HOST_NAME='\h'
     else
         local HOST_NAME="$CUSTOM_PROMPT_HOST"
