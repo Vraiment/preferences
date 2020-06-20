@@ -67,4 +67,9 @@ if [ -d "$HOME/.local/bin" ] ; then
     pathprepend "$HOME/.local/bin"
 fi
 
+# Tools installed from DotNet CLI
+if [ -d "$HOME/.dotnet/tools" ]; then
+    pathprepend "$HOME/.dotnet/tools"
+fi
+
 unset VRAI_SHELL_DIR
