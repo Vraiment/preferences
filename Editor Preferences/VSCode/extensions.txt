@@ -3,3 +3,4 @@ pkief.material-icon-theme
 
 eriklynd.json-tools
 ryu1kn.partial-diff
+slevesque.vscode-hexdump
