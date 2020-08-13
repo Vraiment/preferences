@@ -1,6 +1,6 @@
 akamud.vscode-theme-onedark
-pkief.material-icon-theme
+emmanuelbeziat.vscode-great-icons
 
 eriklynd.json-tools
-ryu1kn.partial-diff
-slevesque.vscode-hexdump
+fabiospampinato.vscode-diff
+ms-vscode.hexeditor
