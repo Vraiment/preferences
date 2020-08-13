@@ -4,10 +4,9 @@
             // Merge existing values in the porfile with these
             "colorScheme": "VraiColors",
             "cursorColor" : "#CBCBCB",
-            "cursorShape" : "filledBox",
+            "cursorShape" : "filledBox"
             // Replace USERNAME with the username
             // "startingDirectory" : "//wsl$/Ubuntu/home/USERNAME",
-            "useAcrylic": true
         }
     ],
     "schemes": [
