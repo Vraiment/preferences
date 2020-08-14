@@ -234,5 +234,21 @@
         "key": "f12",
         "command": "-goToNextReference",
         "when": "inReferenceSearchEditor || referenceSearchVisible"
+    },
+
+    // Allow jump to end of line when in terminal
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.quickOpen",
+        "when": "!terminalFocus"
     }
 ]
