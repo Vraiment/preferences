@@ -113,11 +113,6 @@
         "command": "-workbench.action.findInFiles"
     },
     {
-        "key": "ctrl+shift+f",
-        "command": "-workbench.view.search",
-        "when": "!searchViewletVisible"
-    },
-    {
         "key": "alt+2",
         "command": "-workbench.action.openEditorAtIndex2"
     },
@@ -128,6 +123,11 @@
     },
     {
         "key": "alt+2",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "sideBarVisible && activeViewlet == 'workbench.view.search'"
+    },
+    {
+        "key": "ctrl+shift+f",
         "command": "workbench.action.toggleSidebarVisibility",
         "when": "sideBarVisible && activeViewlet == 'workbench.view.search'"
     },
