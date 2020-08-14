@@ -1,0 +1,36 @@
+{
+    "profiles": [
+        {
+            // Merge existing values in the porfile with these
+            "colorScheme": "VraiColors",
+            "cursorColor" : "#CBCBCB",
+            "cursorShape" : "filledBox",
+            // Replace USERNAME with the username
+            // "startingDirectory" : "//wsl$/Ubuntu/home/USERNAME",
+            "useAcrylic": true
+        }
+    ],
+    "schemes": [
+        {
+            "background" : "#1F2127",
+            "black" : "#000000",
+            "blue" : "#642CFE",
+            "brightBlack" : "#000000",
+            "brightBlue" : "#642CFE",
+            "brightCyan" : "#3EC0CD",
+            "brightGreen" : "#40C82B",
+            "brightPurple" : "#E732E5",
+            "brightRed" : "#D93D2B",
+            "brightWhite" : "#CBCBCB",
+            "brightYellow" : "#B1B12A",
+            "cyan" : "#3EC0CD",
+            "foreground" : "#9BA2B1",
+            "green" : "#40C82B",
+            "name" : "VraiColors",
+            "purple" : "#E732E5",
+            "red" : "#D93D2B",
+            "white" : "#CBCBCB",
+            "yellow" : "#B1B12A"
+        }
+    ]
+}
