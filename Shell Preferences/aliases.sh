@@ -21,7 +21,7 @@ case "$(uname -s)" in
         alias ls='ls --color -N'
 
         # Makes it so you can open files with `open` in WSL
-        if uname -r | grep Microsoft > /dev/null; then
+        if uname -r | grep -i microsoft > /dev/null; then
             alias open="cmd.exe /C start"
         fi
         ;;

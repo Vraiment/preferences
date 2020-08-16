@@ -18,7 +18,7 @@ case "$(uname -s)" in
 esac
 
 # WSL specific environment variables
-if uname -a | grep Microsoft > /dev/null; then
+if uname -a | grep -i microsoft > /dev/null; then
     evarappend WIN_PATH "/mnt/c/Windows/System32"
     evarappend WIN_PATH "/mnt/c/Windows"
     export WIN_PATH
