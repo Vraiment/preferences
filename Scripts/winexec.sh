@@ -11,6 +11,10 @@
 EXECUTABLE=$(basename "${0}")
 IFS=':'
 
+if [[ ! "$EXECUTABLE" =~ .exe$ ]]; then
+    EXECUTABLE="${EXECUTABLE}.exe"
+fi
+
 for DIR in $WIN_PATH; do
     FULL_PATH="${DIR}/${EXECUTABLE}"
     if [ -x "${FULL_PATH}" ]; then
