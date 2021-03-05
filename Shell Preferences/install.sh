@@ -45,7 +45,9 @@ profile.sh
 aliases/000common.sh
 environment/000common.sh
 functions/env-variables.sh
-functions/prompt.sh'
+functions/prompt.sh
+path/000common.sh
+path/010rbenv.sh'
 for SHELL_FILE in $SHELL_FILES; do
     echo "Installing $SHELL_FILE in config dir"
     mkdir -p "$(dirname ${VRAI_SHELL_DIR}/${SHELL_FILE})"

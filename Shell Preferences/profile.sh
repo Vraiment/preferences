@@ -27,34 +27,7 @@ done
 
 # If running bash source the bashrc
 if [ -n "$BASH_VERSION" ]; then
-	source "$HOME/.bashrc"
-fi
-
-# Configure "rbenv", for version 1.1.2
-if [ -d "$HOME/.rbenv/bin" ]; then
-    export PATH="$HOME/.rbenv/bin:${PATH}"
-fi
-
-if [[ $(type -t rbenv) == "file" ]]; then
-    export PATH="$HOME/.rbenv/shims:${PATH}"
-    export RBENV_SHELL=bash
-
-    command rbenv rehash 2>/dev/null
-
-    rbenv() {
-        local command
-        command="${1:-}"
-        if [ "$#" -gt 0 ]; then
-            shift
-        fi
-
-        case "$command" in
-        rehash|shell)
-            eval "$(rbenv "sh-$command" "$@")";;
-        *)
-            command rbenv "$command" "$@";;
-        esac
-    }
+    source "$HOME/.bashrc"
 fi
 
 # Initialize sdkman
@@ -64,17 +37,7 @@ if [ -d "$SDKMAN_DIR" ]; then
     [[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
 fi
 
-# Adds user's personal bin directory
-if [ -d "$HOME/bin" ] ; then
-    pathprepend "$HOME/bin"
-fi
-
-# Add users's personal local bin directory
-if [ -d "$HOME/.local/bin" ] ; then
-    pathprepend "$HOME/.local/bin"
-fi
-
-# Tools installed from DotNet CLI
-if [ -d "$HOME/.dotnet/tools" ]; then
-    pathprepend "$HOME/.dotnet/tools"
-fi
+# Setup PATH (last thing to do in the .profile)
+for PATH_FILE in $(command ls -r "${VRAI_SHELL_DIR}/path/"*.sh); do
+    source "${PATH_FILE}"
+done
