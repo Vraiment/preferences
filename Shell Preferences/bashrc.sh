@@ -26,7 +26,9 @@ case $- in
 esac
 
 # Common environment variables
-source "$VRAI_SHELL_DIR/aliases.sh"
+for ALIAS_FILE in "${VRAI_SHELL_DIR}/aliases/"*.sh; do
+    source "${ALIAS_FILE}"
+done
 
 # Custom prompt
 source "$VRAI_SHELL_DIR/functions/prompt.sh"
