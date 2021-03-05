@@ -10,7 +10,12 @@
 # -----------------------------------------------------------------------------#
 
 # Location of helper shell files
-VRAI_SHELL_DIR="$HOME/.local/etc/vraishell"
+VRAI_SHELL_DIR="${HOME}/.local/etc/vraishell"
+if [[ -z ${VRAI_SHELL_INIT+x} ]]; then
+    VRAI_SHELL_INIT="profile.sh"
+else
+    VRAI_SHELL_INIT="${VRAI_SHELL_INIT}:profile.sh"
+fi
 
 # commands to manipulate the path
 source "$VRAI_SHELL_DIR/functions/env-variables.sh"
@@ -73,5 +78,3 @@ fi
 if [ -d "$HOME/.dotnet/tools" ]; then
     pathprepend "$HOME/.dotnet/tools"
 fi
-
-unset VRAI_SHELL_DIR

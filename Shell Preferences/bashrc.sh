@@ -10,10 +10,11 @@
 # -----------------------------------------------------------------------------#
 
 # Location of helper shell files
-if [ -z "$VRAI_SHELL_DIR" ]; then
-    VRAI_SHELL_DIR="$HOME/.local/etc/vraishell"
+VRAI_SHELL_DIR="${HOME}/.local/etc/vraishell"
+if [[ -z ${VRAI_SHELL_INIT+x} ]]; then
+    VRAI_SHELL_INIT="bashrc.sh"
 else
-    CLEAR_VRAI_SHELL_DIR=true
+    VRAI_SHELL_INIT="${VRAI_SHELL_INIT}:bashrc.sh"
 fi
 
 # commands to manipulate the path
@@ -33,6 +34,3 @@ done
 # Custom prompt
 source "$VRAI_SHELL_DIR/functions/prompt.sh"
 
-if [ "$CLEAR_VRAI_SHELL_DIR" = true ]; then
-    unset VRAI_SHELL_DIR
-fi
