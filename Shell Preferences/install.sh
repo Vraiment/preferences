@@ -40,7 +40,7 @@ backup_if_exists
 echo "Creating config dir"
 mkdir -p "$VRAI_SHELL_DIR"
 
-SHELL_FILES='aliases.sh bashrc.sh env-var-list.sh env-variables.sh profile.sh prompt.sh'
+SHELL_FILES='aliases.sh bashrc.sh functions/env-variables.sh env-variables.sh profile.sh functions/prompt.sh'
 for SHELL_FILE in $SHELL_FILES; do
     echo "Installing $SHELL_FILE in config dir"
     cp "$SHELL_FILE" "$VRAI_SHELL_DIR/"

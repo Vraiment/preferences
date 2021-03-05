@@ -17,7 +17,7 @@ else
 fi
 
 # commands to manipulate the path
-source "$VRAI_SHELL_DIR/env-var-list.sh"
+source "$VRAI_SHELL_DIR/functions/env-variables.sh"
 
 # If not running interactively, don't do anything
 case $- in
@@ -29,7 +29,7 @@ esac
 source "$VRAI_SHELL_DIR/aliases.sh"
 
 # Custom prompt
-source "$VRAI_SHELL_DIR/prompt.sh"
+source "$VRAI_SHELL_DIR/functions/prompt.sh"
 
 if [ "$CLEAR_VRAI_SHELL_DIR" = true ]; then
     unset VRAI_SHELL_DIR

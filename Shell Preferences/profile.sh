@@ -13,7 +13,7 @@
 VRAI_SHELL_DIR="$HOME/.local/etc/vraishell"
 
 # commands to manipulate the path
-source "$VRAI_SHELL_DIR/env-var-list.sh"
+source "$VRAI_SHELL_DIR/functions/env-variables.sh"
 
 # Common environment variables
 source "$VRAI_SHELL_DIR/env-variables.sh"
