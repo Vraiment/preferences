@@ -1,0 +1,290 @@
+// Place your key bindings in this file to override the defaults
+[
+    // Use "sane" right tab switching
+    //   - Bind "ctrl+tab" to select right tab in group
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditorInGroup",
+    },
+    // Use "sane" left tab switching
+    //   - Bind "ctrl+shift+tab" to select left tab
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditorInGroup",
+    },
+    // Language selector
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.editor.changeLanguageMode",
+        "when": "!isMac",
+    },
+    {
+        "key": "cmd+l",
+        "command": "workbench.action.editor.changeLanguageMode",
+        "when": "isMac",
+    },
+    // Replace
+    {
+        "key": "ctrl+r",
+        "command": "editor.action.startFindReplaceAction",
+        "when": "!isMac",
+    },
+    {
+        "key": "cmd+r",
+        "command": "editor.action.startFindReplaceAction",
+        "when": "isMac",
+    },
+    // Move lines up + down
+    {
+        "key": "alt+shift+up",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "!isMac && editorTextFocus && !editorReadonly",
+    },
+    {
+        "key": "alt+shift+down",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "!isMac && editorTextFocus && !editorReadonly",
+    },
+    {
+        "key": "cmd+shift+up",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "isMac && editorTextFocus && !editorReadonly",
+    },
+    {
+        "key": "cmd+shift+down",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "isMac && editorTextFocus && !editorReadonly",
+    },
+
+    // Search/replace all
+    {
+        "key": "alt+shift+f",
+        "command": "workbench.action.findInFiles",
+        "when": "!isMac || (!sideBarVisible && activeViewlet != 'workbench.view.search')",
+    },
+    {
+        "key": "alt+shift+r",
+        "command": "workbench.action.replaceInFiles",
+        "when": "!isMac || (!sideBarVisible && activeViewlet != 'workbench.view.search')",
+    },
+    {
+        "key": "cmd+shift+f",
+        "command": "workbench.action.findInFiles",
+        "when": "isMac || (!sideBarVisible && activeViewlet != 'workbench.view.search')",
+    },
+    {
+        "key": "cmd+shift+r",
+        "command": "workbench.action.replaceInFiles",
+        "when": "isMac || (!sideBarVisible && activeViewlet != 'workbench.view.search')",
+    },
+    {
+        // This should work in all platforms
+        "key": "escape",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "sideBarVisible && searchViewletFocus",
+    },
+
+    // Fold/unfold all
+    {
+        "key": "alt+shift+left",
+        "command": "editor.foldAll",
+        "when": "!isMac",
+    },
+    {
+        "key": "alt+shift+right",
+        "command": "editor.unfold",
+        "when": "!isMac",
+    },
+    {
+        "key": "cmd+shift+left",
+        "command": "editor.foldAll",
+        "when": "isMac",
+    },
+    {
+        "key": "cmd+shift+right",
+        "command": "editor.unfold",
+        "when": "isMac",
+    },
+
+    // Command palette
+    {
+        "key": "alt+p",
+        "command":"workbench.action.quickOpen",
+        "when": "!isMac",
+    },
+    {
+        "key": "alt+shift+p",
+        "command":"workbench.action.showCommands",
+        "when": "!isMac",
+    },
+
+    // Jump from/to definition
+    {
+        // Remove the default ctrl+b because is annoying
+        "key": "ctrl+b",
+        "command": "-workbench.action.toggleSidebarVisibility",
+    },
+    {
+        "key": "ctrl+b",
+        "command": "editor.action.revealDefinition",
+        "when": "!isMac && editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor",
+    },
+    {
+        "key": "ctrl+b",
+        "command": "editor.gotoNextSymbolFromResult",
+        "when": "!isMac && hasSymbols"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "goToNextReference",
+        "when": "!isMac && inReferenceSearchEditor || referenceSearchVisible"
+    },
+    {
+        // Remove the default ctrl+b because is annoying
+        "key": "cmd+b",
+        "command": "-workbench.action.toggleSidebarVisibility",
+    },
+    {
+        "key": "cmd+b",
+        "command": "editor.action.revealDefinition",
+        "when": "isMac && editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor",
+    },
+    {
+        "key": "cmd+b",
+        "command": "editor.gotoNextSymbolFromResult",
+        "when": "isMac && hasSymbols"
+    },
+    {
+        "key": "cmd+b",
+        "command": "goToNextReference",
+        "when": "isMac && inReferenceSearchEditor || referenceSearchVisible"
+    },
+
+    /**************************************************************************/
+    // Sidebar
+    // TODO: Maybe write an extension to simplify the "command" and "when"
+    // properties. Something like "command -> toggleWorkbenchView1"
+    /**************************************************************************/
+    // Windows, Linux binds
+    {
+        "key": "alt+1",
+        "command": "workbench.view.explorer",
+        "when": "!isMac || (!sideBarVisible && activeViewlet != 'workbench.view.explorer')",
+    },
+    {
+        "key": "alt+1",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "!isMac && sideBarVisible && activeViewlet == 'workbench.view.explorer'",
+    },
+    {
+        "key": "alt+2",
+        "command": "workbench.view.search",
+        "when": "!isMac || (!sideBarVisible && activeViewlet != 'workbench.view.search')",
+    },
+    {
+        "key": "alt+2",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "!isMac && sideBarVisible && activeViewlet == 'workbench.view.search'",
+    },
+    {
+        "key": "alt+3",
+        "command": "workbench.view.scm",
+        "when": "!isMac || (!sideBarVisible && activeViewlet != 'workbench.view.scm')",
+    },
+    {
+        "key": "alt+3",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "!isMac && sideBarVisible && activeViewlet == 'workbench.view.scm'",
+    },
+    {
+        "key": "alt+4",
+        "command": "workbench.view.debug",
+        "when": "!isMac || (!sideBarVisible && activeViewlet != 'workbench.view.debug')",
+    },
+    {
+        "key": "alt+4",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "!isMac && sideBarVisible && activeViewlet == 'workbench.view.debug'",
+    },
+    {
+        "key": "alt+5",
+        "command": "workbench.view.remote",
+        "when": "!isMac || (!sideBarVisible && activeViewlet != 'workbench.view.remote')",
+    },
+    {
+        "key": "alt+5",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "!isMac && sideBarVisible && activeViewlet == 'workbench.view.remote'",
+    },
+    {
+        "key": "alt+6",
+        "command": "workbench.view.extensions",
+        "when": "!isMac || (!sideBarVisible && activeViewlet != 'workbench.view.extensions')",
+    },
+    {
+        "key": "alt+6",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "!isMac && sideBarVisible && activeViewlet == 'workbench.view.extensions'",
+    },
+    // Mac binds
+    {
+        "key": "cmd+1",
+        "command": "workbench.view.explorer",
+        "when": "isMac || (!sideBarVisible && activeViewlet != 'workbench.view.explorer')",
+    },
+    {
+        "key": "cmd+1",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "isMac && sideBarVisible && activeViewlet == 'workbench.view.explorer'",
+    },
+    {
+        "key": "cmd+2",
+        "command": "workbench.view.search",
+        "when": "isMac || (!sideBarVisible && activeViewlet != 'workbench.view.search')",
+    },
+    {
+        "key": "cmd+2",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "isMac && sideBarVisible && activeViewlet == 'workbench.view.search'",
+    },
+    {
+        "key": "cmd+3",
+        "command": "workbench.view.scm",
+        "when": "isMac || (!sideBarVisible && activeViewlet != 'workbench.view.scm')",
+    },
+    {
+        "key": "cmd+3",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "isMac && sideBarVisible && activeViewlet == 'workbench.view.scm'",
+    },
+    {
+        "key": "cmd+4",
+        "command": "workbench.view.debug",
+        "when": "isMac || (!sideBarVisible && activeViewlet != 'workbench.view.debug')",
+    },
+    {
+        "key": "cmd+4",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "isMac && sideBarVisible && activeViewlet == 'workbench.view.debug'",
+    },
+    {
+        "key": "cmd+5",
+        "command": "workbench.view.remote",
+        "when": "isMac || (!sideBarVisible && activeViewlet != 'workbench.view.remote')",
+    },
+    {
+        "key": "cmd+5",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "isMac && sideBarVisible && activeViewlet == 'workbench.view.remote'",
+    },
+    {
+        "key": "cmd+6",
+        "command": "workbench.view.extensions",
+        "when": "isMac || (!sideBarVisible && activeViewlet != 'workbench.view.extensions')",
+    },
+    {
+        "key": "cmd+6",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "isMac && sideBarVisible && activeViewlet == 'workbench.view.extensions'",
+    },
+]
