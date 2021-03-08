@@ -186,46 +186,6 @@
         "command": "workbench.action.toggleSidebarVisibility",
         "when": "!isMac && sideBarVisible && activeViewlet == 'workbench.view.search'",
     },
-    {
-        "key": "alt+3",
-        "command": "workbench.view.scm",
-        "when": "!isMac || (!sideBarVisible && activeViewlet != 'workbench.view.scm')",
-    },
-    {
-        "key": "alt+3",
-        "command": "workbench.action.toggleSidebarVisibility",
-        "when": "!isMac && sideBarVisible && activeViewlet == 'workbench.view.scm'",
-    },
-    {
-        "key": "alt+4",
-        "command": "workbench.view.debug",
-        "when": "!isMac || (!sideBarVisible && activeViewlet != 'workbench.view.debug')",
-    },
-    {
-        "key": "alt+4",
-        "command": "workbench.action.toggleSidebarVisibility",
-        "when": "!isMac && sideBarVisible && activeViewlet == 'workbench.view.debug'",
-    },
-    {
-        "key": "alt+5",
-        "command": "workbench.view.remote",
-        "when": "!isMac || (!sideBarVisible && activeViewlet != 'workbench.view.remote')",
-    },
-    {
-        "key": "alt+5",
-        "command": "workbench.action.toggleSidebarVisibility",
-        "when": "!isMac && sideBarVisible && activeViewlet == 'workbench.view.remote'",
-    },
-    {
-        "key": "alt+6",
-        "command": "workbench.view.extensions",
-        "when": "!isMac || (!sideBarVisible && activeViewlet != 'workbench.view.extensions')",
-    },
-    {
-        "key": "alt+6",
-        "command": "workbench.action.toggleSidebarVisibility",
-        "when": "!isMac && sideBarVisible && activeViewlet == 'workbench.view.extensions'",
-    },
     // Mac binds
     {
         "key": "cmd+1",
@@ -246,45 +206,5 @@
         "key": "cmd+2",
         "command": "workbench.action.toggleSidebarVisibility",
         "when": "isMac && sideBarVisible && activeViewlet == 'workbench.view.search'",
-    },
-    {
-        "key": "cmd+3",
-        "command": "workbench.view.scm",
-        "when": "isMac || (!sideBarVisible && activeViewlet != 'workbench.view.scm')",
-    },
-    {
-        "key": "cmd+3",
-        "command": "workbench.action.toggleSidebarVisibility",
-        "when": "isMac && sideBarVisible && activeViewlet == 'workbench.view.scm'",
-    },
-    {
-        "key": "cmd+4",
-        "command": "workbench.view.debug",
-        "when": "isMac || (!sideBarVisible && activeViewlet != 'workbench.view.debug')",
-    },
-    {
-        "key": "cmd+4",
-        "command": "workbench.action.toggleSidebarVisibility",
-        "when": "isMac && sideBarVisible && activeViewlet == 'workbench.view.debug'",
-    },
-    {
-        "key": "cmd+5",
-        "command": "workbench.view.remote",
-        "when": "isMac || (!sideBarVisible && activeViewlet != 'workbench.view.remote')",
-    },
-    {
-        "key": "cmd+5",
-        "command": "workbench.action.toggleSidebarVisibility",
-        "when": "isMac && sideBarVisible && activeViewlet == 'workbench.view.remote'",
-    },
-    {
-        "key": "cmd+6",
-        "command": "workbench.view.extensions",
-        "when": "isMac || (!sideBarVisible && activeViewlet != 'workbench.view.extensions')",
-    },
-    {
-        "key": "cmd+6",
-        "command": "workbench.action.toggleSidebarVisibility",
-        "when": "isMac && sideBarVisible && activeViewlet == 'workbench.view.extensions'",
     },
 ]
