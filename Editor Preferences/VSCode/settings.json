@@ -1,5 +1,6 @@
 {
     "editor.find.addExtraSpaceOnTop": false,
+    "editor.minimap.enabled": false,
     "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "all",
     "editor.rulers": [ 80, 120 ],
@@ -7,11 +8,24 @@
     "editor.wordWrapColumn": 120,
     "explorer.autoReveal": false,
     "explorer.openEditors.visible": 0,
+    "files.associations": {
+        "*.bt": "c"
+    },
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "omnisharp.enableDecompilationSupport": true,
+    "omnisharp.enableRoslynAnalyzers": true,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
+    "terminal.integrated.sendKeybindingsToShell": true,
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\wsl.exe",
+    "window.zoomLevel": 0,
     "workbench.colorTheme": "Atom One Dark",
     "workbench.editor.enablePreview": false,
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.startupEditor": "none"
+    "workbench.iconTheme": "vscode-great-icons",
+    "workbench.startupEditor": "none",
 }
