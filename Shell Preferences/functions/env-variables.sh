@@ -97,7 +97,7 @@ function uniqpath {
 # ex: pathprepend $HOME/bin
 function pathprepend {
     if [[ $# -ne 1 || $(greppath "$1") ]]; then
-        return "$(false)"
+        return 1
     fi
 
     evarprepend PATH "$1"
@@ -107,7 +107,7 @@ function pathprepend {
 # ex: pathappend /usr/local/bin
 function pathappend {
     if [[ $# -ne 1 || $(greppath "$1") ]]; then
-        return "$(false)"
+        return 1
     fi
 
     evarappend PATH "$1"
