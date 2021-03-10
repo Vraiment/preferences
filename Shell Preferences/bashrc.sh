@@ -10,12 +10,13 @@
 # -----------------------------------------------------------------------------#
 
 # Location of helper shell files
-VRAI_SHELL_DIR="${HOME}/.local/etc/vraishell"
+export VRAI_SHELL_DIR="${HOME}/.local/etc/vraishell"
 if [[ -z ${VRAI_SHELL_INIT+x} ]]; then
     VRAI_SHELL_INIT="bashrc.sh"
 else
     VRAI_SHELL_INIT="${VRAI_SHELL_INIT}:bashrc.sh"
 fi
+export VRAI_SHELL_INIT
 
 # commands to manipulate the path
 source "$VRAI_SHELL_DIR/functions/env-variables.sh"
