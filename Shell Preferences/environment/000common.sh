@@ -14,6 +14,7 @@ case "$(uname -s)" in
     Darwin*)
         # Makes so "ls" output is colored
         export CLICOLOR=1
+        export BASH_SILENCE_DEPRECATION_WARNING=1
         ;;
 esac
 
