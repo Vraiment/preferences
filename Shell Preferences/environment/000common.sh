@@ -34,3 +34,12 @@ export HISTSIZE=10000
 
 # Protect against the log4j nonsense
 export JAVA_TOOL_OPTIONS="-Dlog4j2.formatMsgNoLookups=true ${JAVA_TOOL_OPTIONS}"
+
+# For automatically managing the SSH agent
+if command -v keychain > /dev/null; then
+    keychain -q --nogui "$HOME/.ssh/id_rsa"
+    # The following sourced file has the env variables for the SSH agent
+    if [ -f "$HOME/.keychain/${HOSTNAME}-sh" ]; then
+        source "$HOME/.keychain/${HOSTNAME}-sh"
+    fi
+fi
