@@ -22,6 +22,7 @@ esac
 if uname -a | grep -i microsoft > /dev/null; then
     evarappend WIN_PATH "/mnt/c/Windows/System32"
     evarappend WIN_PATH "/mnt/c/Windows"
+    evarappend WIN_PATH "/mnt/c/Program Files/dotnet" # For having the dotnet cli
     export WIN_PATH
 fi
 
