@@ -1,6 +1,0 @@
-# For the Atom text edit, to install place under the "$HOME/.atom/" directory
-'body':
-  'ctrl-tab': 'pane:show-next-item'
-  'ctrl-tab ^ctrl': 'unset!'
-  'ctrl-shift-tab': 'pane:show-previous-item'
-  'ctrl-shift-tab ^ctrl': 'unset!'
