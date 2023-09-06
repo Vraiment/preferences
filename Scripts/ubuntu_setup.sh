@@ -38,7 +38,7 @@ function install-common-software-apt() {
     readonly software
 
     sudo apt update
-    sudo apt install "${software[@]}"
+    sudo apt install --assume-yes "${software[@]}"
 }
 
 function install-common-software-snap() {
@@ -61,7 +61,7 @@ function install-common-software-flatpak() {
 
     # Install system wide with sudo, this is because I don't want to use home
     # directory storage on flatpak applications
-    sudo flatpak install "${software[@]}"
+    sudo flatpak install --system --assumeyes "${software[@]}"
 }
 
 function install-virtualbox() {
