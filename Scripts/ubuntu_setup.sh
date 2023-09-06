@@ -11,8 +11,8 @@ function main() {
     flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
     install-common-software-flatpak
 
-    # TODO: Install non repository managed applications
-    # install-virtualbox
+    # TODO: Install non repository managed applications (1Password, NAPS2)
+    install-virtualbox
 
     # Remove the Snap store, Gnome Software is installed instead
     sudo snap remove --purge snap-store
@@ -74,17 +74,21 @@ function install-virtualbox() {
 }
 
 function setup-virtualbox-repository() {
-    local oracle_public_key
-    
-    oracle_public_key="$(mktemp)"
-    readonly oracle_public_key
+    local oracle_public_key_download_path oracle_public_key_path
+
+    oracle_public_key_download_path="$(mktemp)"
+    readonly oracle_public_key_download_path
+
+    oracle_public_key_path=/usr/share/keyrings/oracle_vbox_2016.gpg
+    readonly oracle_public_key_path
 
     # Fetch GPG key
-    curl --output "$oracle_public_key" https://www.virtualbox.org/download/oracle_vbox_2016.asc
-    gpg --dearmor "$oracle_public_key".gpg /usr/share/keyrings/oracle-virtualbox-2016.gpg
+    curl --output "$oracle_public_key_download_path" https://www.virtualbox.org/download/oracle_vbox_2016.asc
+    gpg --dearmor "$oracle_public_key_download_path"
+    sudo mv "$oracle_public_key_download_path".gpg "$oracle_public_key_path"
 
     # Create repository file
-    echo "deb [arch=amd64 signed-by=$oracle_public_key] https://download.virtualbox.org/virtualbox/debian $(lsb_release --codename --short) contrib" \
+    echo "deb [arch=amd64 signed-by=$oracle_public_key_path] https://download.virtualbox.org/virtualbox/debian $(lsb_release --codename --short) contrib" \
         | sudo tee /etc/apt/sources.list.d/virtualbox.list
 
     # Fetch repository metadata only for VirtualBox
