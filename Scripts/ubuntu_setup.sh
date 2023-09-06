@@ -1,8 +1,8 @@
 #!/bin/bash
 
-set -e # Exit on error
-set -o
-set -x # Print the output of the commands executed
+set -e # Exit immediately if a command exits with a non-zero status.
+set -o pipefail # Propagate exit code on a pipeline
+set -x # Print commands and their arguments as they are executed.
 
 function main() {
     install-common-software-apt
